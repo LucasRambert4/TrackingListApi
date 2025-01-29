@@ -48,65 +48,83 @@ Elle offre les fonctionnalités suivantes :
 
 ## Tests Rapides
 
-1. Inscription
-   POST /auth/register
-   Body JSON :
-   {
-     "email": "test@example.com",
-     "password": "secret123"
-   }
+Inscription
 
-2. Connexion
-   POST /auth/login
-   Body JSON :
-   {
-     "email": "test@example.com",
-     "password": "secret123"
-   }
-   → Retourne { "token": "..." }
+bash
+Copier
+POST /auth/register
+Body JSON:
+{
+  "email": "test@example.com",
+  "password": "secret123"
+}
+Connexion
 
-3. Récupérer le profil
-   GET /auth/me
-   Headers:
-     Authorization: Bearer <token>
+bash
+Copier
+POST /auth/login
+Body JSON:
+{
+  "email": "test@example.com",
+  "password": "secret123"
+}
+→ Retourne { "token": "..." }
 
-4. Créer un voyage
-   POST /voyages
-   Headers:
-     Authorization: Bearer <token>
-   Body JSON :
-   {
-     "destination": "Paris",
-     "startDate": "2025-01-01",
-     "endDate": "2025-01-05"
-   }
+Récupérer le profil
 
-5. Lister les voyages
-   GET /voyages
-   Headers:
-     Authorization: Bearer <token>
+bash
+Copier
+GET /auth/me
+Headers:
+  Authorization: Bearer <token>
+Créer un voyage
 
-6. Ajouter un item
-   POST /voyages/<voyageId>/items
-   Headers:
-     Authorization: Bearer <token>
-   Body JSON :
-   {
-     "name": "Chaussures",
-     "quantity": 1
-   }
+bash
+Copier
+POST /voyages
+Headers:
+  Authorization: Bearer <token>
+Body JSON:
+{
+  "destination": "Paris",
+  "startDate": "2025-01-01",
+  "endDate": "2025-01-05"
+}
+Lister les voyages
 
-7. Modifier un item (ex: marquer “pris”)
-   PATCH /voyages/<voyageId>/items/<itemId>
-   Headers:
-     Authorization: Bearer <token>
-   Body JSON :
-   {
-     "isTaken": true
-   }
+bash
+Copier
+GET /voyages
+Headers:
+  Authorization: Bearer <token>
+Ajouter un item
 
-8. Supprimer un item
-   DELETE /voyages/<voyageId>/items/<itemId>
-   Headers:
-     Authorization: Bearer <token>
-   → Réponse 204 si succès.
+bash
+Copier
+POST /voyages/<voyageId>/items
+Headers:
+  Authorization: Bearer <token>
+Body JSON:
+{
+  "name": "Chaussures",
+  "quantity": 1
+}
+Modifier un item (ex: marquer “pris”)
+
+bash
+Copier
+PATCH /voyages/<voyageId>/items/<itemId>
+Headers:
+  Authorization: Bearer <token>
+Body JSON:
+{
+  "isTaken": true
+}
+Supprimer un item
+
+bash
+Copier
+DELETE /voyages/<voyageId>/items/<itemId>
+Headers:
+  Authorization: Bearer <token>
+→ Réponse 204 si succès.
