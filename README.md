@@ -6,9 +6,6 @@ Elle offre les fonctionnalités suivantes :
 - **Gestion des voyages** (liste, création)  
 - **Gestion des items** pour chaque voyage (liste, ajout, mise à jour, suppression, marquage “pris”)  
 
-> **Note** : Cette API est conçue pour être consommée par une application mobile.  
-> Il n’y a **pas** d’interface front dans ce projet.
-
 ---
 
 ## Sommaire
