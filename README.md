@@ -48,4 +48,65 @@ Elle offre les fonctionnalités suivantes :
 
 ## Tests Rapides
 
+1. Inscription
+   POST /auth/register
+   Body JSON :
+   {
+     "email": "test@example.com",
+     "password": "secret123"
+   }
 
+2. Connexion
+   POST /auth/login
+   Body JSON :
+   {
+     "email": "test@example.com",
+     "password": "secret123"
+   }
+   → Retourne { "token": "..." }
+
+3. Récupérer le profil
+   GET /auth/me
+   Headers:
+     Authorization: Bearer <token>
+
+4. Créer un voyage
+   POST /voyages
+   Headers:
+     Authorization: Bearer <token>
+   Body JSON :
+   {
+     "destination": "Paris",
+     "startDate": "2025-01-01",
+     "endDate": "2025-01-05"
+   }
+
+5. Lister les voyages
+   GET /voyages
+   Headers:
+     Authorization: Bearer <token>
+
+6. Ajouter un item
+   POST /voyages/<voyageId>/items
+   Headers:
+     Authorization: Bearer <token>
+   Body JSON :
+   {
+     "name": "Chaussures",
+     "quantity": 1
+   }
+
+7. Modifier un item (ex: marquer “pris”)
+   PATCH /voyages/<voyageId>/items/<itemId>
+   Headers:
+     Authorization: Bearer <token>
+   Body JSON :
+   {
+     "isTaken": true
+   }
+
+8. Supprimer un item
+   DELETE /voyages/<voyageId>/items/<itemId>
+   Headers:
+     Authorization: Bearer <token>
+   → Réponse 204 si succès.
