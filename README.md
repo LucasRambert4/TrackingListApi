@@ -12,13 +12,8 @@ Elle offre les fonctionnalités suivantes :
 
 1. [Technologies utilisées](#technologies-utilisées)  
 2. [Prérequis](#prérequis)  
-3. [Installation et lancement](#installation-et-lancement)  
-4. [Configuration (variables d’environnement)](#configuration-variables-denvironnement)  
-5. [Structure du projet](#structure-du-projet)  
-6. [Documentation des endpoints](#documentation-des-endpoints)  
-7. [Tests rapides](#tests-rapides)  
-8. [Contributions et améliorations](#contributions-et-améliorations)  
-9. [Licence](#licence)
+3. [Installation et lancement](#installation-et-lancement)   
+4. [Tests rapides](#tests-rapides)
 
 ---
 
@@ -48,3 +43,9 @@ Elle offre les fonctionnalités suivantes :
    ```bash
    git clone https://github.com/LucasRambert4/TrackingListApi.git
    cd TrackingListApi
+
+---
+
+## Test Rapides
+
+
