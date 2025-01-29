@@ -1,6 +1,6 @@
 # Packing List API
 
-Ce projet est une **API** permettant de gérer des listes d’objets à emporter lors de voyages (“packing list”), inspirée de l’application **Packr Travel Packing List**.  
+Ce projet est une **API** permettant de gérer des listes d’objets à emporter lors de voyages (“packing list”).
 Elle offre les fonctionnalités suivantes :  
 - **Authentification** (création de compte, connexion, affichage du profil)  
 - **Gestion des voyages** (liste, création)  
