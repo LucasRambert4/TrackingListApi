@@ -46,6 +46,6 @@ Elle offre les fonctionnalités suivantes :
 
 ---
 
-## Test Rapides
+## Tests Rapides
 
 
